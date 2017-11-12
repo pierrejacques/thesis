@@ -56,9 +56,9 @@ Logistic回归方程\ref{formula:logit}是通过sigmoid函数处理后的多项�
 
 对齐指的是并列元素的边界之间的是否相互共线；比例指的是并列元素在对齐方向上的长度比值是否简单。在同样的内容元素的前提下，对齐较严格、比例较简单的页面布局具有较低的视觉复杂度可以降低视觉负担，反之则具有较高的视觉认知负担。
 
-\begin{figure}
+\begin{figure}[H]
   \includegraphics[width=\columnwidth]{fig/fig_grid.pdf}
-  \bicaption[fig:grid]{网格复杂度特征提取示意图}{网格复杂度特征提取示意图，纵横的蓝色曲线分别为一维向量V和H，在此基础上可以对画面分割得到网格（红色曲线）。}{Fig}{the sketch map of grid complexity feature, the blue curves are the mono vectors V and H, the red lines are the grids generated from the vectors.}
+  \bicaption[fig:grid]{网格复杂度特征提取示意图}{网格复杂度特征提取示意图，纵横的蓝色曲线分别为一维向量V和H，在此基础上可以对画面分割得到网格（红色曲线）。}{Fig}{an example of the calculation of grid complexity feature, the blue curves are the mono vectors V and H, the red lines are the grids generated from the vectors.}
 \end{figure}
 
 Kohlschutter【2008】提出了对页面的横纵坐标上的像素的灰度值累加到一维向量的方式来考量垂直和平行方向上的对齐情况，并由此获得一个1280维的向量和一个720维的向量。对于出现明显对齐边界的地方，一维向量会表现出明显的高峰或是凹陷。\ref{fig:grid}示例了如何通过堆积算法提取网格信息。具体的特征提取过程如下：
@@ -92,7 +92,12 @@ Kohlschutter【2008】提出了对页面的横纵坐标上的像素的灰度值�
 \end{table}
 
 \subsection{占空分布}
-占空分布统计信息复杂度为零的区域的分布情况。依次采用大（$100\times100$）、中（$30\times30$）、小（$10\times10$）三种画笔对画面的空白区域进行填充（一旦被先前的画笔填充就不能再填充），得到3中画笔各自的填充得到的联通块的数量、面积、最值和方差。这些特征的名称、计算方式和Logistic回归验证的显著性在表\ref{tab:blank}中列出。
+\begin{figure}[H]
+  \includegraphics[width=0.5\columnwidth]{fig/fig_exp2_eg.jpg}
+  \includegraphics[width=0.5\columnwidth]{fig/fig_blank.jpg}
+  \bicaption[fig:blank]{占空分布的示意图}{网页例图（左）和对应的占空分布的计算过程（右），红绿蓝分别代表大中小的“画笔”所填充的空白空间}{Fig}{an example of the calculation of the blank distribution where red-, green-, blue-colored areas respectively represents the areas filled by big, medium and small 'paint pens'.}
+\end{figure}
+占空分布统计信息复杂度为零的区域的分布情况。依次采用大（$100\times100$）、中（$30\times30$）、小（$10\times10$）三种画笔对画面的空白区域进行填充（一旦被先前的画笔填充就不能再填充），得到3中画笔各自的填充得到的联通块的数量、面积、最值和方差。图\ref{fig:blank}显示了一张网页例图（左）和占空分布的计算过程（右），红绿蓝分别代表大中小的“画笔”所填充的空白空间。这些特征的名称、计算方式和Logistic回归验证的显著性在表\ref{tab:blank}中列出。
 
 \begin{table}[H]
   \centering
@@ -114,6 +119,11 @@ Kohlschutter【2008】提出了对页面的横纵坐标上的像素的灰度值�
 表\ref{tab:blank}的结果表明，“大中小”三种占空的面积对美感都有显著的推测能力。而“大”和“中”表现出正相关，“小”表现出负相关意味着画面的留白在不同内容区块之间较大同事在同类区块之间较小的时候网页页面版式会比较好看。这与类间间距越大，类内间距越小则越美观的观点【】是一致的，其实代表着一种信息的有序性。
 
 \subsection{信息密度分布}
+\begin{figure}[H]
+  \includegraphics[width=0.5\columnwidth]{fig/fig_exp2_eg.jpg}
+  \includegraphics[width=0.5\columnwidth]{fig/fig_info.jpg}
+  \bicaption[fig:info]{信息密度分布的示意图}{网页例图（左）和对应的信息密度分布的计（右），白点代表被认为是信息高密度的拐点}{Fig}{an example of the calculation of the information density distribution. The white dots are where information is considered to be dense.}
+\end{figure}
 信息密度分布与空白分布相反，考量页面上信息分布的疏密。通过统计可能是信息高密度的边沿拐点在页面上的分布来考量信息密度的分布。具体计算中将页面分块成3行乘4列的12块区块，得到由每一个区块中的拐点个数构成的12维向量。对此向量统计其最值、均值、方差作为特征。这些特征的名称、计算方式和Logistic回归验证的显著性在表\ref{tab:density}中列出。
 
 \begin{table}[H]
@@ -140,7 +150,11 @@ Kohlschutter【2008】提出了对页面的横纵坐标上的像素的灰度值�
 \subsection{视觉显著性分布}
 视觉显著性是对眼动的视觉注视点的分布的一种模拟，是一种视觉重点分布为主的特征。采用Itti 2005【】中对视觉显著性的算法，用基于高速金字塔的明度梯度图构建页面的视觉显著性分布。
 
-【图】
+\begin{figure}[H]
+  \includegraphics[width=0.5\columnwidth]{fig/fig_exp2_eg.jpg}
+  \includegraphics[width=0.5\columnwidth]{fig/fig_saliency.jpg}
+  \bicaption[fig:info]{视觉显著性分布的示意图}{网页例图（左）和对应的视觉显著性分布的计（右），明度代表该区域的视觉显著性}{Fig}{an example of the calculation of the saliency distribution. The saliency of an area is represented by the luminance}
+\end{figure}
 
 相关特征的名称、计算方式和Logistic回归验证的显著性在表\ref{tab:saliency}中列出。
 

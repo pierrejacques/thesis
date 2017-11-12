@@ -65,11 +65,8 @@ websites from hell：
 \begin{figure}[H]
   \centering
   \includegraphics [width=0.7\textwidth]{fig/fig_score.pdf}
-  \caption{实验页面的评分的频率分布直方图。可以看到好坏美感的评分被清晰地二值化分开成了两个具有好坏页面代表性的组别。差的网页的评分的一致性相比好的网页更高，一定程度上证实了人们往往对对象的不美观上更容易达成一致【】}
-  \label{fig:score}
+  \bicaption[fig:score]{实验页面的评分的频率分布直方图}{实验页面的评分的频率分布直方图。可以看到好坏美感的评分被清晰地二值化分开成了两个具有好坏页面代表性的组别。差的网页的评分的一致性相比好的网页更高，一定程度上证实了人们往往对对象的不美观上更容易达成一致【】}{Fig}{The distribution of the pages on scores. There are clearly two groups. The bad pages are generally more definite, while the good pages are more evenly distributed.}
 \end{figure}
-
-
 
 \section{分析}
 \label{sec:exp1-ana}
@@ -93,8 +90,7 @@ websites from hell：
 \begin{figure}[H]
   \centering
   \includegraphics [width=0.85\columnwidth]{fig/fig_AOI.jpg}
-  \caption{AOI聚类的示意图。上方是参与眼动实验的一张页面，下方是该页面与其AOI聚类结果的重叠图。AOI聚类通过Tobii Studio软件自带的聚类算法来实现。该页面一共产生了11个AOI聚类区块。}
-  \label{fig:aoi}
+  \bicaption[fig:aoi]{AOI聚类的示意图}{AOI聚类的示意图。上方是参与眼动实验的一张页面，下方是该页面与其AOI聚类结果的重叠图。AOI聚类通过Tobii Studio软件自带的聚类算法来实现。该页面一共产生了11个AOI聚类区块。}{Fig}{Top is one of the testing pages. Bottom is the page overlapped with AOIs, which are generated using default clustering tool in Tobii studio. There are total 11 AOIs for this page.}
 \end{figure}
 
 表格\ref{tab:traditional}列出了参与计算的所有传统指标在与美感评分的关联性方面的表现，包括每个指标与评分的线性相关系数和对好坏页面组别进行方差分析的p值。在0.05的置信系数上，只有注视个数通过了方差检验（$p=0.04$）。注视个数表现出了微弱的与美感评分的正相关性，也即在相同的曝光时间内，好看的页面普遍获得了更多的眼动注视，拥有更活跃的眼动反馈。
@@ -115,8 +111,7 @@ websites from hell：
     AOI中注视个数的标准差 & 0.2556 & 0.0991 \\
     \hline
   \end{tabular}
-  \caption{传统的眼动指标与美感关联性的表现。这些指标都直接提取自注视、扫视和AOI聚类这些常见的眼动度量，只有注视的总数表现出了微弱的方差检验显著性。}
-  \label{tab:traditional}
+  \bicaption[tab:traditional]{传统的眼动指标与美感关联性的表现}{传统的眼动指标与美感关联性的表现。这些指标都直接提取自注视、扫视和AOI聚类这些常见的眼动度量，只有注视的总数表现出了微弱的方差检验显著性。}{Table}{The performances of some traditional statistics of fixations, saccades and AOIs. Only the number of fixations has a weak correlation with the aesthetic scores and the ANOVA is significant.}
 \end{table}
 
 
@@ -174,8 +169,7 @@ Hooge【】使用一种类似的称之为“视觉路径熵”（scan path entro
     30.& 3 - 7 - 4\\
     \\
   \end{tabular}
-  \caption{30个被试的在图\ref{fig:aoi}中的例图的11个AOI之间的眼动跳转序列}
-  \label{tab:seq}
+  \bicaption{AOI之间的眼动跳转示例}{30个被试的在图\ref{fig:aoi}中的例图的11个AOI之间的眼动跳转序列}{Table}{Gaze transitions of the 30 subjects among the 11 AOIs in the image (see Figure \ref{fig:aoi}).}
 \end{table}
 
 \paragraph{眼动的马尔科夫性}
@@ -202,8 +196,7 @@ Hooge【】使用一种类似的称之为“视觉路径熵”（scan path entro
   0    & 0.1  & 0.1  & 0.17 & 0.04 & 0    & 0.21 & 0.08 & 0.04 & 0.29 & 0\\
   \hline
   \end{tabular}
-\caption{例图的11个AOI之间的一步马尔科夫转移概率矩阵}
-\label{tab:mat}
+\bicaption[tab:mat]{AOI之间的一步转移概率矩阵示例}{例图的11个AOI之间的一步马尔科夫转移概率矩阵}{Table}{Markov transition probability matrix of the 11 AOIs.}
 \end{table}
 
 矩阵中，$p_ij$表示在当前注视在视觉兴趣点i的前提下，跳转到视觉兴趣点j的转移概率。
@@ -229,8 +222,7 @@ $$H_{relative}~=~\frac{H}{H_{max}}$$
   Total&0.12268&39&&&\\
   \hline
 \end{tabular}
-\caption{基于AOI转移的视觉熵的方差分析}
-\label{tab:ANOVA-ve}
+\bicaption[tab:ANOVA-ve]{基于AOI转移的视觉熵的方差分析}{基于AOI转移的视觉熵的方差分析}{Table}{ANOVA of visual entropy based on the gaze transitions.}
 \end{table}
 
 对于上述眼动熵与美感没有显著关联性的可能是如下两个原因导致的如下：
@@ -247,8 +239,7 @@ $$H_{relative}~=~\frac{H}{H_{max}}$$
 \begin{figure}[H]
   \centering
   \includegraphics [width=\columnwidth]{fig/fig_eg_hm.jpg}
-  \caption{图\ref{fig:aoi}中的例图的眼动热图。它是对眼睛在画面上的注视位置的概率分布的一种逼近或估计。}
-  \label{fig:hm}
+  \bicaption[fig:hm]{眼动热图示例}{图\ref{fig:aoi}中的例图的眼动热图。它是对眼睛在画面上的注视位置的概率分布的一种逼近或估计。}{Fig}{The heatmap of the example pages in figure \ref{fig:aoi}. It visualizes the spatial probability distribution of fixations on the page.}
 \end{figure}
 
 考察代表眼动注视的位置的二维随机变量$(X, Y)$，则它的概率空间就是屏幕的分辨率空间（即把屏幕上的每一个像素认为是注视的一种可能的位置选择）。基于作用在该随机变量上的概率分布$P(X, Y)$，可以如下定义熵：
@@ -277,8 +268,7 @@ $$d\cdot e^{-\frac{(x-x_0)^2 + (y-y_0)^2}{2\sigma^2}}$$
   Total&3.94762&39&&&\\
   \hline
 \end{tabular}
-\caption{热图熵（视觉注意熵）的方差分析。}
-\label{tab:ANOVA-vae-dw}
+\bicaption[tab:ANOVA-vae-dw]{VAE的方差分析}{热图熵（视觉注意熵）的方差分析。}{Table}{ANOVA analysis of the entropy of heatmap.}
 \end{table}
 
 到目前为止，基于热图的熵是与美感表现出最强相关性的指标。鉴于热图有时会被认为是视觉注意的分布图，我们把上述定义的基于热图的熵称作视觉注意熵（Visual Attention Entropy，VAE）。
@@ -309,8 +299,7 @@ rVAE = \frac{VAE}{bVAE}
   Total&0.00811&39&&&\\
   \hline
 \end{tabular}
-\caption{相对视觉注意熵（rVAE）的方差分析}
-\label{tab:ANOVA-rvae-dw}
+\bicaption[tab:ANOVA-rvae-dw]{rVAE的方差分析}{相对视觉注意熵（rVAE）的方差分析}{Table}{ANOVA of rVAE.}
 \end{table}
 
 \ref{formula:rvae}似乎表明，基础视觉注意熵（bVAE）越大则相对视觉注意熵（rVAE）越小，则对应的美感有越大可能更好。但事实上，这不完全正确，由于之间的显著的相关性（$r = 0.77$）表\ref{tab:corr}，拥有较高的bVAE的页面很可能也会有较高的VAE。如果把bVAE当做是---
@@ -327,8 +316,7 @@ rVAE = \frac{VAE}{bVAE}
   rVAE&-&-&-&-&1\\
   \hline
 \end{tabular}
-\caption{主要的眼动指标和美感得分两两之间的相关系数。}
-\label{tab:corr}
+\bicaption[tab:corr]{重要眼动指标的相关系数}{主要的眼动指标和美感得分两两之间的相关系数。}{Table}{The pearson correlations in-between the aesthetic scores and the main indices.}
 \end{table}
 
 上述关键指标间的相关性分析表明，bVAE与美感评分几乎没有相关性，但与注视的个数有较为显著的相关性。图\ref{fig:bvae}列出了所有的页面的个体VAE的盒图。
@@ -336,8 +324,7 @@ rVAE = \frac{VAE}{bVAE}
 \begin{figure}[H]
   \centering
   \includegraphics [width=1\columnwidth]{fig/fig_bvae.pdf}
-  \caption{40张页面上30个被试的视觉重点熵（VAE）的盒图。页面从做到右按照美感评分排序。红色短横线代表均值，及该页面的基础视觉注意熵（bVAE）。在好坏页面见没有表现出显著差异。}
-  \label{fig:bvae}
+  \bicaption[fig:bvae]{bVAE的盒图}{40张页面上30个被试的视觉重点熵（VAE）的盒图。页面从做到右按照美感评分排序。红色短横线代表均值，及该页面的基础视觉注意熵（bVAE）。在好坏页面见没有表现出显著差异。}{Fig}{Boxplots of the 30 individual VAEs on each of the 40 webpages. The 40 pages are sorted by their scores, from low to high. The red lines in the boxes represent the bVAEs (means).  There is no apparent difference between the good and the bad pages}
 \end{figure}
 
 bVAE的引入使得具有不同内容复杂度的页面的VAE变得可比较，并提供了对他们的美感评分的更为精确的预测。
@@ -346,15 +333,13 @@ bVAE的引入使得具有不同内容复杂度的页面的VAE变得可比较，�
 \begin{figure}[H]
   \centering
   \includegraphics [width=1\columnwidth]{fig/fig_box.pdf}
-  \caption{VAE和rVAE的盒图。左为VAE右为rVAE。显然，rVAE更显著地区分了好坏两个页面组别。}
-  \label{fig:box}
+  \bicaption[fig:box]{VAE和rVAE的盒图}{VAE和rVAE的盒图。左为VAE右为rVAE。显然，rVAE更显著地区分了好坏两个页面组别。}{Fig}{Boxplot of VAE (left) and rVAE (right). Apparently, the rVAEs more significantly separate the two classes.}
 \end{figure}
 
 \begin{figure}[H]
   \centering
   \includegraphics [width=1\columnwidth]{fig/fig_with-score.pdf}
-  \caption{40张页面的VAE-得分散点图（左）和rVAE-得分散点图（右）。右图的点云更强的方向性。}
-  \label{fig:with-score}
+  \bicaption[fig:with-score]{VAE和rVAE关于得分的的散点图}{40张页面的VAE-得分散点图（左）和rVAE-得分散点图（右）。右图的点云更强的方向性。}{Fig}{The scatter plots of 40 pages over VAE (left) and rVAE (right). The point cloud in the right plot appears more significantly skewed.}
 \end{figure}
 
 \section{例外}
@@ -366,8 +351,7 @@ bVAE的引入使得具有不同内容复杂度的页面的VAE变得可比较，�
   \centering
   \includegraphics [width=\columnwidth]{fig/fig_out.jpg}
   \includegraphics [width=\columnwidth]{fig/fig_out_alt.jpg}
-  \caption{例外页面图（上）和改进的例外页面（下）。该页面在图\ref{fig:with-score}中标号24。如果全屏显示，你会觉得视觉上有一些决策压力。 右侧是略微改进后的版本，一些局部的视觉重点被调整了，从而视觉压力略微降低。}
-  \label{fig:out}
+  \bicaption[fig:out]{眼动实验中例外的页面}{例外页面图（上）和改进的例外页面（下）。该页面在图\ref{fig:with-score}中标号24。如果全屏显示，你会觉得视觉上有一些决策压力。 右侧是略微改进后的版本，一些局部的视觉重点被调整了，从而视觉压力略微降低。}{Fig}{The left is one of the outlier pages (point 24 in figure \ref{fig:with-score}). If you display it on full screen, you may feel your eyes a little strained with selection pressure. As a comparison, the right is a revised version, in which some local saliencies have been adjusted. You may feel your eyes slightly relaxed.}
 \end{figure}
 
 \section{VAE的稳定性}
@@ -379,8 +363,8 @@ bVAE的引入使得具有不同内容复杂度的页面的VAE变得可比较，�
   \centering
   \includegraphics [width=0.85\columnwidth]{fig/fig_vae-t.pdf}
   \includegraphics [width=0.85\columnwidth]{fig/fig_rvae-t.pdf}
-  \caption{40张页面的VAE(上)和rVAE（下）随时间的变化图。蓝色曲线代表美感评分较好的网页组别，红色代表坏的。这些曲线随时间逐步趋于稳定，好的页面普遍给出了更小的VAE和rVAE值。两个组别随时间愈发分离。}
-  \label{fig:with-t}
+  \bicaption[fig:with-t]{VAE和rVAE的值随时间的变化}{40张页面的VAE(上)和rVAE（下）随时间的变化图。蓝色曲线代表美感评分较好的网页组别，红色代表坏的。这些曲线随时间逐步趋于稳定，好的页面普遍给出了更小的VAE和rVAE值。两个组别随时间愈发分离。}{Fig}{The VAEs (top) and the rVAEs (bottom) of the 40 pages gradually stabilize over time. The blue curves represent the "good" pages. The red curves represent the "bad" pages. The good pages generally yield lower VAE and rVAE values. The two groups  become more separated towards the end.
+}
 \end{figure}
 
 图\ref{fig:corr-t}展现了熵和美感评分的相关系数随时间变化的曲线，在三秒的时刻相关系数取得了极值。由于我们没有记录3秒后的眼动数据，故没有办法看到后续的发展趋势。以母线的增长趋势，我们猜测相关系数可以变得更强。
@@ -388,8 +372,7 @@ bVAE的引入使得具有不同内容复杂度的页面的VAE变得可比较，�
 \begin{figure}[H]
   \centering
   \includegraphics [width=0.85\columnwidth]{fig/fig_corr_t.pdf}
-  \caption{两种视觉注意熵和美感评分的相关系数随时间的变化曲线。熵的显著性随时间愈发加强。1000ms开始rVAE的曲线稳定保持在VAE曲线的下方。依照发展的趋势，如果继续延长实验时间至超过3000ms，熵的表现可能更佳。}
-  \label{fig:corr-t}
+  \bicaption[fig:corr-t]{rVAE和VAE与美感的相关系数随时间的变化}{两种视觉注意熵和美感评分的相关系数随时间的变化曲线。熵的显著性随时间愈发加强。1000ms开始rVAE的曲线稳定保持在VAE曲线的下方。依照发展的趋势，如果继续延长实验时间至超过3000ms，熵的表现可能更佳。}{Fig}{ The correlations between the entropies and the aesthetic scores become more and more significant over time. It is clear that rVAEs consistently sit below the VAEs after 1000 ms. The tendencies show that both curves, especially the rVAEs, could perform better, if the duration were longer than 3000 ms.}
 \end{figure}
 
 图\ref{fig:with-user}展现了熵与美感评分的相关性随着被纳入计算的被试人数的增长而逐渐趋于稳定的趋势。图中的曲线结果是通过每次纳入一名随机被试的眼动数据获得的。似乎更多的被试人数会获得更好的与美感评分的关联性，但同时也以为着更高的时间成本和实验开销。
@@ -398,8 +381,7 @@ bVAE的引入使得具有不同内容复杂度的页面的VAE变得可比较，�
   \centering
   \includegraphics [width=0.85\columnwidth]{fig/fig_user.pdf}
   %\includegraphics [width=80mm]{fig_vae_user.jpg}
-  \caption{the correlations between the entropies and the aesthetic scores become more significant with the increasing numbers of subjects. The performance could be better if the number of subjects were larger than 30.}
-  \label{fig:with-user}
+  \bicaption[fig:with-user]{VAE和rVAE关于参与计算的用户人的变化}{VAE和rVAE随参与计算的用户人数的增多逐渐趋于稳定和显著。更多的实验人数（超过30人）可能表现出更好的结果}{Fig}{the correlations between the entropies and the aesthetic scores become more significant with the increasing numbers of subjects. The performance could be better if the number of subjects were larger than 30.}
 \end{figure}
 
 到目前为止我们的所有关于熵的计算都是基于热图高斯核$\sigma = 30$的基础上进行的。那么熵与美感的相关性对$\sigma$变化的敏感度如何呢?
@@ -408,8 +390,7 @@ bVAE的引入使得具有不同内容复杂度的页面的VAE变得可比较，�
 \begin{figure}[H]
   \centering
   \includegraphics [width=0.85\columnwidth]{fig/fig_sigma.pdf}
-  \caption{两种视觉注意熵与美感的相关性随热图高斯核标准差的变化的曲线图。曲线较为平滑，在很长一段区间内都保持在各自的极值附近：对VAE，从$20px$到$60px$都保持在-0.5以下，对rVAE，从$10px$到$120px$都保持在-0.6以下并在$40px$左右取得其极值。}
-  \label{fig:with-sigma}
+  \bicaption[fig:with-sigma]{VAE和rVAE关于高斯核的标准差$\sigma$的变化}{两种视觉注意熵与美感的相关性随热图高斯核标准差的变化的曲线图。曲线较为平滑，在很长一段区间内都保持在各自的极值附近：对VAE，从$20px$到$60px$都保持在-0.5以下，对rVAE，从$10px$到$120px$都保持在-0.6以下并在$40px$左右取得其极值。}{Fig}{The correlations smoothly change with the value of $\sigma$. The performances of both VAE and rVAE are stably approaching their maxima in a rather wide range of the $\sigma$. For VAE, from $20px$ to $60px$, the correlation coefficient stays below -0.5. For rVAE, from 10px to 120px, the correlation coefficient stays below -0.6 and the curve reaches its extremum at about $40px$.}
 \end{figure}
 
 上述的分析证实了VAE和rVAE在对美感的推测力方面的稳定性。并且看来，通过加长实验时间、扩大被试的规模和选择合适的$\sigma$取值，它们的表现还可以更好。

@@ -36,7 +36,7 @@ RESTful API的概念由Roy Fielding在2000年提出【】。是英文Representat
 但物件识别与美感也并非完全没有关系，一些强刺激物例如人脸，对网页的美感会产生直接的影响。由于人类的内隐记忆对于人脸具有天生的极强的识别能力【】，包含人脸的网页往往有更大概率取得较高的美感评价。【】。一套强大的美感评价系统可以是由多个模块构成的，分别对页面的美感进行不同方面的评价。对于与设计行为关系更为密切的版式参数层面的美感评价，CNN的效果令人怀疑。一个更为和合理的思路是从理论层面出发，了解与浅层美感相关的因素，并对网页图像通过特征提取手段提取能够量化或者概括上述因素的特征，最后对这些已经具有高度解释力特征应用简单的机器学习模型来生成美感评价模型。
 
 \section{技术架构}
-\begin{figure}
+\begin{figure}[H]
   \includegraphics[width=\columnwidth]{fig/fig_sys_structure.pdf}
   \bicaption[fig:sys_struct]{评分系统的模块化架构}{评分系统的模块化架构，图解见图\ref{fig:sys_instruct}}{Fig}{the modular structure of the evaluating system}
 \end{figure}
@@ -44,7 +44,7 @@ RESTful API的概念由Roy Fielding在2000年提出【】。是英文Representat
 
 软件工程的模块化设计（Modular Design）是通过把系统划分成可以在不同系统中独立复用的模块（Modules）的设计模式。这些模块构成图状结构，在系统中仅仅通过约定好的接口（Interfaces）进行数据交换。模块化设计可以提高代码的复用率、提高系统对维护开发等过程造成的变化的适应能力【Baldwin and Clark, 2000】
 
-\begin{figure}
+\begin{figure}[H]
   \center
   \includegraphics[width=0.6\columnwidth]{fig/fig_struct_instruction.pdf}
   \bicaption[fig:sys_instruct]{评分系统的模块图解}{评分系统的模块图解}{Fig}{the sketch map of a modular}
@@ -75,7 +75,7 @@ RESTful API的概念由Roy Fielding在2000年提出【】。是英文Representat
 
 评分数据库负责缓存客户直接上传或者根据url截屏得到的图片。图片被转成base64编码格式。对base64编码通过哈希SHA1加密算法加密后取前8位，作为该图片保存的键（key）。采用哈希加密作为键的做法有诸多好处。哈希散列是一种对数据改变敏感的加密方式，只要图片数据发生改变，哈希散列就会完全不同。通过哈希散列验证数据是否损坏改变、快速反查上传的图片是否已经在数据库缓存等。图片信息以base64编码字符串的形式存储在数据库中该key下的字典的img字段中（在Redis中被称为哈希Hash）。字典还包含有feature（待计算的特征）字段特征和score字段（待计算的评分）。图\ref{fig:database}展示了存储一张图片内容的键值对的结构。评分数据库中的每个键值对被分别设置了自动释放时间（expire time），在保存24小时后会自动释放空间。
 
-\begin{figure}
+\begin{figure}[H]
   \center
   \includegraphics[width=0.4\columnwidth]{fig/fig_database.pdf}
   \bicaption[fig:database]{评分系统数据的键值对结构}{评分系统数据的键值对结构}{Fig}{the key-value hash structure stored in Redis database}
@@ -123,9 +123,5 @@ RESTful API的概念由Roy Fielding在2000年提出【】。是英文Representat
 
 学习与评价模块根据键向数据库获取图像特征和评分（对训练数据流）并进行学习或是评分。学习和评价过程依赖Google开源的Tensorflow机器学习框架实现。Tensorflow意为张量流，结合numpy的矩阵运算和相关模型的数学基础，他可以方便地通过python构建一个学习模型的图，并在外部通过更为底层的语言进行训练和计算，并可进行gpu加速。
 
-\section{演示与结果}
-【图图图】通过客户端界面的展示了美感评分系统的核心功能实现。
-
-【】【】【】
-
+\section{小结}
 通过对训练集数据按照2:8的验证（Validation）训练（Training）比进行交叉，上述演示系统达到$83\%$的分类准确率。离实际应用尚有一定差距，但一定程度上进一步补充了实验一和实验二关于进化论美学和流畅理论的验证。
