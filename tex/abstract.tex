@@ -4,23 +4,28 @@
 %%==================================================
 
 \begin{abstract}
-美学长期以来一直是人类探索的话题，但其研究在历史上大部分时期都停留在文化艺术领域，从而难以在工程上施展应用。进化论美学的提出为美学使用科学方法进行研究提供了可行性，让通过心理学、统计学、信息论等手段探索美的本质成为可能。本文基于进化论美学的思想，对已被广泛认为与审美存在重要联系的视觉复杂度和视觉注意通过眼动实验进行实证探索，从信息论的角度揭示美感与复杂度和注意的内在联系，论证与进化论美学相关的流畅理论，发现基于热图的视觉注意熵与美感之间存在着显著的相关性。在应用层面，从对复杂度和视觉注意的研究结论，对网页提取能够量化复杂度和视觉注意的相关特征，通过机器学习手段搭建网页版式评分系统，并取得了不错的评分准确率。
-\keywords{\large 上海交大 \quad 饮水思源 \quad 爱国荣校}
+
+进化论美学的提出为美学使用科学方法进行研究提供了可行性，让通过心理学、统计学、信息论等手段探索美的本质成为可能。
+
+基于进化论美学的流畅理论认为视觉流畅性与美感之间存在正相关。本文使用眼动仪对30个被试者对40张网页页面的最初3秒的眼动行为的进行记录，引入香农信息熵对数据进行分析。结果表明基于热图的眼动熵（视觉注意熵）与被试者对网格美感的评价存在着显著的相关性。其改进版本——相对视觉注意熵有更高的相关性（相关系数$r = -0.65$，显著性$P < 0.0001$）。此单指标对好坏美感的样本的线性分类准确率就达到了$87.5\%$。进一步的分析表明视觉注意熵的表现在曝光开始1秒后达到稳定。发展曲线表明如果实验时间超过3秒，它的表现甚至可以更好。
+
+在证实视觉行为与美感的关系后，本文论证从图片中提取的视觉复杂度与视觉显著性相关的特征对美感的推测能力。通过对收集1447张网页截图进行众包评分和版式特征提取，发现网格复杂度、信息密度、占空和显著性都分别对美感评分表现除了较高的组间区分度。
+
+最后本文从工程上给出上述研究的一个应用——网页版式评分系统。基于有效特征构建的评分系统取得了对样本页面$83\%$的平均交叉验证分类准确率。
+
+\keywords{进化论美学 \quad 流畅理论 \quad 视觉显著性 \quad 网页版式 \quad 特征提取}
 \end{abstract}
 
 \begin{englishabstract}
 
-An imperial edict issued in 1896 by Emperor Guangxu, established Nanyang Public School in Shanghai. The normal school, school of foreign studies, middle school and a high school were established. Sheng Xuanhuai, the person responsible for proposing the idea to the emperor, became the first president and is regarded as the founder of the university.
+Evolutionary aesthetics made it possible to study aesthetics using scientific methods introduced from psychology, statistics and information theory.
 
-During the 1930s, the university gained a reputation of nurturing top engineers. After the foundation of People's Republic, some faculties were transferred to other universities. A significant amount of its faculty were sent in 1956, by the national government, to Xi'an to help build up Xi'an Jiao Tong University in western China. Afterwards, the school was officially renamed Shanghai Jiao Tong University.
+Fluency theory based on evolutionary aesthetics proposed that observer's aesthetics response is positively correlated to the fluency of his/her eye movement. This study tracked 30 observers' initial landings for 40 web pages (each displayed for 3 seconds) and introduced Shannon Entropy to analyze the data. The result shows that the heatmap entropy (visual attention entropy) is highly correlated with the observers' aesthetic judgements of the web pages. Its improved version, the relative Visual Attention Entropy, has a more significant correlation with the perceived aesthetics($r = -0.65, P < 0.0001$). Theis single metric along can distinguish between good- and bad-looking pages with an accuracy of $87.5\%$. Further investigating reveals that the performance of Visual Attention Entropy became stable after 1 second of exposure. The outcome indicated that the performance could be better if the tracking time was extended beyond 3 seconds.
 
-Since the reform and opening up policy in China, SJTU has taken the lead in management reform of institutions for higher education, regaining its vigor and vitality with an unprecedented momentum of growth. SJTU includes five beautiful campuses, Xuhui, Minhang, Luwan Qibao, and Fahua, taking up an area of about 3,225,833 m2. A number of disciplines have been advancing towards the top echelon internationally, and a batch of burgeoning branches of learning have taken an important position domestically.
+After the prove of the correlation between eye movement fluency and perceived aesthetics, this study dicusses graphic features' predictive ability to aesthetic ratings.
+We collected a total amount of 1447 web pages and rated them by conducting an online survey. By extracting graphic features that are related to visual complexity and visual saliency, we found grid complexity, margin distribution, information density and saliency distribution performed significant variance between good- and bad-looking groups.
 
-Today SJTU has 31 schools (departments), 63 undergraduate programs, 250 masters-degree programs, 203 Ph.D. programs, 28 post-doctorate programs, and 11 state key laboratories and national engineering research centers.
+Finally we realized an application for the aforementioned results, a web layout evaluating system, and reached a $83\%$ average cross validation accuracy. 
 
-SJTU boasts a large number of famous scientists and professors, including 35 academics of the Academy of Sciences and Academy of Engineering, 95 accredited professors and chair professors of the "Cheung Kong Scholars Program" and more than 2,000 professors and associate professors.
-
-Its total enrollment of students amounts to 35,929, of which 1,564 are international students. There are 16,802 undergraduates, and 17,563 masters and Ph.D. candidates. After more than a century of operation, Jiao Tong University has inherited the old tradition of "high starting points, solid foundation, strict requirements and extensive practice." Students from SJTU have won top prizes in various competitions, including ACM International Collegiate Programming Contest, International Mathematical Contest in Modeling and Electronics Design Contests. Famous alumni include Jiang Zemin, Lu Dingyi, Ding Guangen, Wang Daohan, Qian Xuesen, Wu Wenjun, Zou Taofen, Mao Yisheng, Cai Er, Huang Yanpei, Shao Lizi, Wang An and many more. More than 200 of the academics of the Chinese Academy of Sciences and Chinese Academy of Engineering are alumni of Jiao Tong University.
-
-\englishkeywords{\large SJTU, master thesis, XeTeX/LaTeX template}
+\englishkeywords{evolutional aesthetics, fluency theory, visual saliency, webpage layout, feature extracting}
 \end{englishabstract}
