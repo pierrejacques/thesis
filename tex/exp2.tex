@@ -1,4 +1,4 @@
-\chapter{实验二：图像特征提取}
+\chapter{对审美客体的研究：眼动相关图像特征提取}
 \label{chap:exp2}
 
 \section{实验目的}
@@ -76,6 +76,7 @@ Kohlschutter et al. 2008 提出了对页面的横纵坐标上的像素的灰度�
 
 \begin{table}[H]
   \centering
+  \bicaption[tab:grid]{网格复杂度特征的显著性}{网格复杂度特征的显著性}{Table}{The significance of grid complexity features}
   \small
   \begin{tabular}{lllrr}
     \hline
@@ -89,7 +90,6 @@ Kohlschutter et al. 2008 提出了对页面的横纵坐标上的像素的灰度�
     横向均衡性均值 & 同上对横向网格计算 & 11.72 & 0.10\\
     \hline
   \end{tabular}
-  \bicaption[tab:grid]{网格复杂度特征的显著性}{网格复杂度特征的显著性}{Table}{The significance of grid complexity features}
 \end{table}
 
 \clearpage
@@ -97,15 +97,16 @@ Kohlschutter et al. 2008 提出了对页面的横纵坐标上的像素的灰度�
 
 \subsection{占空分布}
 \begin{figure}[H]
-  \includegraphics[width=0.5\columnwidth]{fig/fig_exp2_eg.jpg}
-  \includegraphics[width=0.5\columnwidth]{fig/fig_blank.jpg}
-  \bicaption[fig:blank]{占空分布的示意图}{网页例图（左）和对应的占空分布的计算过程（右），红绿蓝分别代表大中小的“画笔”所填充的空白空间}{Fig}{an example of the calculation of the blank distribution where red-, green-, blue-colored areas respectively represents the areas filled by big, medium and small 'paint pens'.}
+  \includegraphics[width=0.5\columnwidth]{fig/fig_eg_bw.jpg}
+  \includegraphics[width=0.5\columnwidth]{fig/fig_blank_2.jpg}
+  \bicaption[fig:blank]{占空分布的示意图}{网页例图（左）和对应的占空分布的计算过程（右），暗红、紫灰、粉蓝色分别代表大中小的“画笔”所填充的空白空间}{Fig}{an example of the calculation of the blank distribution where red-, green-, blue-colored areas respectively represents the areas filled by big, medium and small 'paint pens'.}
 \end{figure}
 
-占空分布统计信息复杂度为零的区域的分布情况。依次采用大（$100\times100$）、中（$30\times30$）、小（$10\times10$）三种画笔对画面的空白区域进行填充（一旦被先前的画笔填充就不能再填充），得到三种画笔各自的填充的联通块的数量、面积、最值和方差。图\ref{fig:blank}显示了一张网页例图（左）和占空分布的计算过程（右），红绿蓝分别代表大中小的“画笔”所填充的空白空间。这些特征的名称、计算方式和Logistic回归验证的显著性在表\ref{tab:blank}中列出。
+占空分布统计信息复杂度为零的区域的分布情况。依次采用大（$100\times100$）、中（$30\times30$）、小（$10\times10$）三种画笔对画面的空白区域进行填充（一旦被先前的画笔填充就不能再填充），得到三种画笔各自的填充的联通块的数量、面积、最值和方差。图\ref{fig:blank}显示了一张网页例图（左）和占空分布的计算过程（右），暗红、紫灰、粉蓝分别代表大中小的“画笔”所填充的空白空间。这些特征的名称、计算方式和Logistic回归验证的显著性在表\ref{tab:blank}中列出。
 
 \begin{table}[H]
   \centering
+  \bicaption[tab:blank]{占空分布特征的显著性}{占空分布特征的显著性}{Table}{The significance of margin distribution features}
   \small
   \begin{tabular}{lllrr}
     \hline
@@ -116,7 +117,6 @@ Kohlschutter et al. 2008 提出了对页面的横纵坐标上的像素的灰度�
     $10\times10$空白面积 & $10\times10$的“方块画笔”填充的空白区域面积 & -5.61 & $9.6e^{-04}$\\
     \hline
   \end{tabular}
-  \bicaption[tab:blank]{占空分布特征的显著性}{占空分布特征的显著性}{Table}{The significance of margin distribution features}
 \end{table}
 
 \clearpage
@@ -126,9 +126,9 @@ Kohlschutter et al. 2008 提出了对页面的横纵坐标上的像素的灰度�
 
 \subsection{信息密度分布}
 \begin{figure}[H]
-  \includegraphics[width=0.5\columnwidth]{fig/fig_exp2_eg.jpg}
-  \includegraphics[width=0.5\columnwidth]{fig/fig_info.jpg}
-  \bicaption[fig:info]{信息密度分布的示意图}{网页例图（左）和对应的信息密度分布的计（右），白点代表被认为是信息高密度的拐点}{Fig}{an example of the calculation of the information density distribution. The white dots are where information is considered to be dense.}
+  \includegraphics[width=0.5\columnwidth]{fig/fig_eg_bw.jpg}
+  \includegraphics[width=0.5\columnwidth]{fig/fig_info_2.jpg}
+  \bicaption[fig:info]{信息密度分布的示意图}{网页例图（左）和对应的信息密度分布的计（右），亮点代表被认为是信息高密度的拐点}{Fig}{an example of the calculation of the information density distribution. The white dots are where information is considered to be dense.}
 \end{figure}
 
 信息密度分布从空白分布相反的角度考量页面上信息分布的疏密。通过统计可能是信息高密度的边沿拐点在页面上的分布来考量信息密度的分布。具体计算中将页面分块成3行乘4列的12块区块，得到由每一个区块中的拐点个数构成的12维向量。对此向量统计其最值、均值、方差作为特征。这些特征的名称、计算方式和Logistic回归验证的显著性在表\ref{tab:density}中列出。
@@ -136,6 +136,7 @@ Kohlschutter et al. 2008 提出了对页面的横纵坐标上的像素的灰度�
 \begin{table}[H]
   \centering
   \small
+  \bicaption[tab:density]{信息密度分布特征的显著性}{信息密度分布特征的显著性}{Table}{The significance of information density distribution features}
   \begin{tabular}{lllrr}
     \hline
      特征名称 & 计算方式 & 回归系数 & Prob$>$F \\
@@ -151,7 +152,6 @@ Kohlschutter et al. 2008 提出了对页面的横纵坐标上的像素的灰度�
     信息密度重心 & 统计整体拐点重心的横坐标 & 19.81 & $3.8e^{-04}$\\
     \hline
   \end{tabular}
-  \bicaption[tab:density]{信息密度分布特征的显著性}{信息密度分布特征的显著性}{Table}{The significance of information density distribution features}
 \end{table}
 
 结果表明总体而言信息密度相关的特征与美感评分有显著的相关性。局部上，画面上特定位置区域的局部信息量对美感评分的推测力尤为显著，意味着人们在眼动习惯上虽然有着各自不同的习惯，但是对画面上特定位置（左上，中部，左侧）都表现出了较为一致的优先关注和判断。这可能与现代人的文字阅读习惯有关，也许在具有不同阅读方向习惯的文化环境（如阿拉伯）中，这些影响美感评价的关注点会有所不同。
@@ -170,6 +170,7 @@ Kohlschutter et al. 2008 提出了对页面的横纵坐标上的像素的灰度�
 \begin{table}[H]
   \centering
   \small
+  \bicaption[tab:saliency]{视觉显著性分布特征的显著性}{视觉显著性分布特征的显著性}{Table}{The significance of saliency distribution features}
   \begin{tabular}{lllrr}
     \hline
      特征名称 & 计算方式 & 回归系数 & Prob$>$F \\
@@ -180,7 +181,6 @@ Kohlschutter et al. 2008 提出了对页面的横纵坐标上的像素的灰度�
     显著性重心y & 整体显著性的纵向重心：$G = \frac{\sum V_i Y_i}{\sum V_i}$ & 4.78 & $8.5e^{-10}$\\
     \hline
   \end{tabular}
-  \bicaption[tab:saliency]{视觉显著性分布特征的显著性}{视觉显著性分布特征的显著性}{Table}{The significance of saliency distribution features}
 \end{table}
 
 视觉显著性相关的特征在四类特征中表现出了最强的美感推测力。结果表明对于每个区块自身而言，区块内部的显著性方差越小，越有可能取得更高的美感评分；而整体而言，显著性重心的适度倾斜对美感评分有积极的贡献。这一定程度上论证了我们队适度视觉复杂量和适度视觉重点分布不平衡的假设。

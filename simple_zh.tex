@@ -1,16 +1,69 @@
-\chapter{对审美主体的研究：眼动实验}
-\label{exp1}
+\documentclass[master, fontset=mac, openany, oneside, zihao=-4]{sjtuthesis}
 
-\section{实验目的}
-眼动实验的研究对象是审美主体，即作为观察者的人。根据流畅理论，正面的审美反馈往往意味着更为流畅的眼动行为。通过眼动仪对被试者眼动行为记录得到的数据，探讨眼动行为与美感的关系，并试图论证以下假设：
+\addbibresource{bib/thesis.bib}
 
+\begin{document}
+
+\title{基于进化论美学的网页版式评分系统}
+
+
+\begin{abstract}
+
+如今眼动仪被广泛地运用在用户界面的评估中，然而对眼动数据进行的美感角度的分析和解读仍是困难的。为了在眼动数据和美感之间找到联系，我们研究了三十位参与者对40张网页最初曝光的3秒时间内的眼动数据。他们也对这些网页页面进行了评分。 我们引入了香农信息熵来分析眼动实验数据。结果表明，基于眼动热图的信息熵（视觉重点熵）与被试对网页的美感评分之间有着显著的相关性。视觉重点熵可以被解释为被试在视觉信息处理过程中的流畅性或是混乱性。它的改进指标——相对视觉重点熵，对美感表现出了更高的相关性($r=-0.65, F=26.84, P=0.7e^{-6}$)。仅仅这样的一个单一指标就对实验网页做出了87.5\%的好坏区分正确率。进一步的研究表明，视觉重点熵和相对视觉重点熵与美感的相关性表现从眼动曝光的大约1秒左右开始变得稳定。相关曲线暗示更长的实验时间可能会取得更好的实验结果。
+
+\keywords{进化论美学 \quad 流畅理论 \quad 信息熵 \quad 视觉注意 \quad 版式特征提取}
+\end{abstract}
+\clearpage
+
+\mainmatter	% 使用阿拉伯数字对正文编号
+% 以下是正文部分
+\section{介绍}
+
+对一个网站来说，美感是吸引用户的重要因素。大数据研究表明绝大多数的用户在进入一个网页的初始几秒内就决定去留。而好看的网页带给用户更强的可信感，看起来更好用。 审美（Aesthetics）一词的词源来自希腊语，表示“观察”。人的视觉系统——眼球和其连接的大脑皮层，使我们能够观察和发现周遭的美。人眼的行为就像一盏聚光灯\citen{Eriksen1972}：拥有一个狭窄而高精度的中央视觉，环绕着一个广阔而低精度的周围视觉。我们的视觉注意力决策这盏聚光灯的移动方向，聚焦到人脸、文字、屏幕上的图片等各类有意义的目标上去，从杂乱的背景中提取出有效的信息。通过不停地从一个注意点和跳转到下一个注意点，发掘零碎的有效信息，最终能在脑内形成一个对观察物的整体的印象。 眼动仪被设计用于记录注视和眼动。在可用性和推销的研究中，它被广泛地用来评估关键信息的可达性。虽然这往往很有用，但对于用户体验研究而言，仍然显得过于局限。 有没有可能通过眼动数据来预测一个网页的美感满意度呢？为了回答这个问题，我们作了很多努力。证据表明，眼动数据确实拥有对观察者的美感体验的一定的推测能力，答案是肯定的。 四十张网页对三十个被试的视觉曝光，被独立地用眼动仪记录下来。每个页面向每个被试者曝光3000ms，之后他们每人分别对每个网页基于自己的审美给出美感评价。香农信息熵在眼动实验数据的分析中被引入。结果表明基于用于可视化视觉重点分布的热图的信息熵与用户给出的美感评分表现出了显著的相关性($r=-0.65, F=26.84, P=0.7e^{-6}$)。仅仅这一项单一指标可以对网页的美感好坏作出87.5\%的分类正确率。熵在这里代表一种对视觉注意过程中的混乱度的客观量化，从而能够作为流畅理论\citen{Reber2004, Reber2012}的一个直接证据。流畅理论认为美感基于观察者的视觉处理体验，视觉处理体验越是流畅，美感反馈越是积极。
+
+
+\section{相关研究}
+\subsection{眼动与美学实证研究}
+
+在考察眼动与对艺术品的美感评价之间的联系方面，Berlyne 1971 认为美感评价是基于两种视觉行为的：一种是整体而多样的探索性扫掠，一种是局部而具体的，以信息获取为目的的聚焦\cite{Berlyne1971}。前者具有较广的视线范围和较短暂的注视时长，后者具有较小的视线范围和较长的注视时长。Berlyne提出这种由注视时长和扫视范围交替构成的眼动探索模式对于图片的美感满意度的评价是至关重要的，该探索性视觉的理念进一步影响了如下的一系列研究。Locher \& Paul 2006发现简单地对一个抽象组合对象的色彩平衡进行调整会造成眼动注视分布和视觉路劲的改变\cite{Locher2006}；Franke et al. 2008 发现更受好评的三维渲染图像往往有更多的眼动注视个数和更长的注视时长\cite{Franke2008}；Plumhoff发现对于好的图像，眼动注视的时长更长，眼动扫视的范围随时间表现出更大的变化\cite{Plumhoff2009}；Wallraven et al.分析了20名被试对275个不同时期的艺术作品的眼动数据，发现不同风格的作品的眼动注视个数和时长之间存在较强的差异\cite{Wallraven2009}；Massaro et al.对美术作品进行归类（彩色的、灰度的、人文的、自然的），并以此作为研究视觉注意力中自底向上和自顶向下过程的贡献的实验材料\cite{Massaro}；Khalighy et al.通过三组基于抽象图像和产品设计的眼动实验推导出一个关于美感的经验公式，他认为美感与注视的个数和注视时长之间的方差的乘积呈正比\cite{Khalighy2015}。
+
+上述的研究解释了眼动追踪技术对于多种形式对象的美感研究的潜在可能性，但是在本质上，他们的成果没有超出Berlyne的想法。类似诸如更多的注视个数、更长的注视时长、随时间更富变化的扫视范围等实验结果，仅仅加强证实了Berlyne的观点——对于具有更高美感评价的对象会获得更活跃而动态的眼动行为反馈。事实上，这些结果很难得到合理的美学角度的解释。尽管眼动仪已经成为美学研究的新装备，但到目前为止，就眼动行为是如何与美感反馈产生联系的仍然缺乏深入和令人信服的解释。
+
+
+\subsection{眼动与网页美感}
+网页美感的研究主要都聚焦在从网页中提取具有美感推测力的特征上，例如复杂度和秩序\cite{Deng2010}，低级的图像特征\cite{Zheng}和高级客观设计指标\cite{Ivory}。
+Seckler et al. 2015 考察了设计因素诸如结构和色彩是如何与网页的客观美感的不同方面产生联系的\cite{Seckler2015Linking}。Reinecke et al. 2013 引入对网页视觉复杂度和色彩性的计算模型，发现它们对人类的美感偏好具有预测能力\cite{Reinecke}。
+
+眼动仪被广泛用来评估对网页上特定元素的视觉注意度，然而现有的眼动数据的可视化和分析手段与美感相关的用户体验没有任何关联，关于眼动和美感的关系仍有待证实\cite{Santella}。眼动仪能否提供一个更为普遍的度量观者的美感体验的手段?我们需要通过美学的视角借助一些数据挖掘的手段，来从眼动数据中提取出更多的可解释的指标。
+
+
+
+
+
+\section{理论假设}
+
+我们的设想源自流畅理论\cite{Reber2004, Reber2012}。浏览一个网页的过程本质上是人类的视觉系统处理一张图像的过程。如何来评估这种视觉处理的流畅性呢?我们可以通过视觉处理管道的入口，神经和认知系统的上游——视觉注意，来入手。根本上，视觉注意可以定义为从全部可达的信息中选出一个用于进一步处理的子集的过程。视觉注意持续地通过自底向上（画面视觉重点的驱动）和自定向下（诱人的内容的驱动）的方式在外围视力中选择目标。审美主体的视觉注意受他对审美对象的视觉复杂度（visual complexity）和视觉重点分布（即显著性分布，visual saliency）两个部分。前者决定了耗费视觉注意资源量的大前提，后者则可以在相同的视觉复杂度下降低或增高视觉处理的代价。
+
+视觉接收通道可以理解成一个具有带宽（视觉信息接收能力）上限的网络信息传输通道。如果流畅理论成立的话，则注意过程将是美感评价的途径。具体而言，一个能够造成正面审美反馈的对象的视觉复杂度应该在一个不过高亦不过低的合理的区间范围内，在此基础上的视觉重点分布应该能够恰当地引导视线，从而提高视觉信息传输的效率。
+
+合理而流畅的视觉注意应满足：
 \begin{enumerate}
-  \item 正面审美反馈所对应的眼动行为在整体上具有在面对多个视觉注意线索时，更少冲突地作出选择的特点
-  \item 正面审美反馈所对应的眼动行为在局部上具有面对一个视觉重点时更聚焦地趋向一个兴趣点的特点。
+  \item 在面对多个视觉注意线索时，更少冲突地作出选择.
+  \item 在面对局部视觉重点时，更聚焦地趋向一个兴趣点
 \end{enumerate}
 
+我们引入信息熵的概念来量化视觉注意行为的混乱度（不流畅性），并探究它是否跟美感评价相关。熵将被应用在眼动数据的以下两个方面：
+
+\begin{enumerate}
+  \item 眼动注意的转移序列的熵：反映注意力在多个视觉重点间转移的复杂度和不确定性
+  \item 眼动注意的热图熵：反映眼动注意在空间分布上的分散度和混乱度。
+\end{enumerate}
+
+
+
+
 \section{实验与数据}
-眼动实验模拟视觉自然而突然地降落到网页页面上的情形，并采用被我们称为“限时曝光”的实验形式，这种方式将鼓励被试对页面进行快速而全面的视觉探索而不是停留在具体而局部的信息收集。在三张用于适应性缓冲的网页过后，被试者将意识到他们只有几秒钟的时间来看每一张展示的页面。早先的研究表明，为了避免在糟糕的页面上的无意义停留，用户习惯于在到达一个新的页面的几秒钟内作出去留的决定\citen{Liu2010}。故这样的实验设计是有合理性的。
+眼动实验模拟视觉自然而突然地降落到网页页面上的情形，并采用被我们称为“限时曝光”的实验形式，这种方式将鼓励被试对页面进行快速而全面的视觉探索而不是停留在具体而局部的信息收集。在三张用于适应性缓冲的网页过后，被试者将意识到他们只有几秒钟的时间来看每一张展示的页面。早先的研究表明，为了避免在糟糕的页面上的无意义停留，用户习惯于在到达一个新的页面的几秒钟内作出去留的决定\cite{Liu2010}。故这样的实验设计是有合理性的。
 
 有限的眼动曝光时间对于研究早期的无意识的视觉行为而言已经足够。同时，这种避免了因被试者的视觉疲劳而造成的误差。
 
@@ -18,24 +71,15 @@
 实验使用的眼动设备是Tobii的T-50眼动仪和配套的Tobii Studio软件。该眼动仪的屏幕分辨率是$1280\times1024px$。
 
 \subsection{实验样本}
-实验采用对40个网站的首页的截图作为测试的样本。为了让这些页面对好/坏的美感更具有代表性，我们通过一个评选最好看的网页设计的网站（the best designs
-\footnote{
-the best design：
-\href{https://www.thebestdesigns.com}{https://www.thebestdesigns.com}
-}
-）和一个评选最丑的网页设计的网站（ websites from hell
-\footnote{
-websites from hell：
-\href{https://websitesfromhell.net}{https://websitesfromhell.net}
-}
-）两个网站来分别采集好的页面样本和坏的页面样本。只采集了这两个网站上的基数页面。
+实验采用对40个网站的首页的截图作为测试的样本。为了让这些页面对好/坏的美感更具有代表性，我们通过一个评选最好看的网页设计的网站（the best designs）和一个评选最丑的网页设计的网站（websites from hell）两个网站来分别采集好的页面样本和坏的页面样本。只采集了这两个网站上的基数页面。
 
 包含广为人知的图标或人脸以及包含非拉丁字符的页面被筛除以避免来自非美学的社会因素的干扰。最终我们从上述两个网站个筛选出20个网页，并在$1280\times800$的分辨率下对他们进行截图以匹配我们使用的眼动仪的分辨率。截图包含了网页浏览器的窗口。图\ref{fig:all}展示了实验用到的所有的样本页面。
 
 \begin{figure}
+  \label{fig:all}
   \centering
   \includegraphics[width=0.8\textwidth]{fig/fig_all.jpg}
-  \bicaption[fig:all]{眼动实验的实验样本}{所有在眼动实验中被用到的图片。按照美感评分的高低从上至下，从左至右地排列}{Fig}{All the pages used in our eye-tracking test are arranged from top to bottom, left to right according to their scores from low to high.}
+  \caption{所有在眼动实验中被用到的图片。按照美感评分的高低从上至下，从左至右地排列}
 \end{figure}
 
 \subsection{被试者}
@@ -63,9 +107,10 @@ websites from hell：
 通过眼动仪获得的原始数据是有一系列的注视构成的。每个注视包含了四个参数信息：开始时间、持续时长、在屏幕上的横纵坐标位置。后续我们将基于这种形式的原始眼动数据展开分析。
 
 \begin{figure}[H]
+  \label{fig:score}
   \centering
   \includegraphics [width=0.7\textwidth]{fig/fig_score.pdf}
-  \bicaption[fig:score]{实验页面的评分的频率分布直方图}{实验页面的评分的频率分布直方图。可以看到好坏美感的评分被清晰地二值化分开成了两个具有好坏页面代表性的组别。差的网页的评分的一致性相比好的网页更高，一定程度上证实了人们往往在对象的不美观上更容易达成一致。}{Fig}{The distribution of the pages on scores. There are clearly two groups. The bad pages are generally more definite, while the good pages are more evenly distributed.}
+  \caption{实验页面的评分的频率分布直方图。可以看到好坏美感的评分被清晰地二值化分开成了两个具有好坏页面代表性的组别。差的网页的评分的一致性相比好的网页更高，一定程度上证实了人们往往在对象的不美观上更容易达成一致。}
 \end{figure}
 
 \section{分析}
@@ -88,18 +133,19 @@ websites from hell：
 上面提到的AOI是Area of interests的缩写，表示视觉兴趣点，是通过对页面上捕捉到的所有注视进行空间聚类得到空间区块。我们采用Tobii Studio软件包中自带的默认AOI聚类算法来获得这些AOI区块。图\ref{fig:aoi}以参与实验的一张样本页面为例，标出了它的AOI聚类情况。
 
 \begin{figure}[H]
+  \label{fig:aoi}
   \centering
   \includegraphics [width=0.85\columnwidth]{fig/fig_AOI.jpg}
-  \bicaption[fig:aoi]{AOI聚类的示意图}{AOI聚类的示意图。上方是参与眼动实验的一张页面，下方是该页面与其AOI聚类结果的重叠图。AOI聚类通过Tobii Studio软件自带的聚类算法来实现。该页面一共产生了11个AOI聚类区块。}{Fig}{Top is one of the testing pages. Bottom is the page overlapped with AOIs, which are generated using default clustering tool in Tobii studio. There are total 11 AOIs for this page.}
+  \caption{AOI聚类的示意图。上方是参与眼动实验的一张页面，下方是该页面与其AOI聚类结果的重叠图。AOI聚类通过Tobii Studio软件自带的聚类算法来实现。该页面一共产生了11个AOI聚类区块。}
 \end{figure}
 
 表格\ref{tab:traditional}列出了参与计算的所有传统指标在与美感评分的关联性方面的表现，包括每个指标与评分的线性相关系数和对好坏页面组别进行方差分析的$p$值。在$0.05$的置信系数上，只有注视个数通过了方差检验（$p=0.04$）。它表现出了微弱的与美感评分的正相关性，也即在相同的曝光时间内，好看的页面普遍获得了更多的眼动注视，拥有更活跃的眼动反馈。
-同时，AOI中注视的平均数与美感有着很弱的正相关性，意味着对于好看的页面，用户倾向于在一个AOI上停留更多次。这也许表明对于美感评价较好的页面，观察者迅速进入了信息汲取的阶段\citen{Berlyne1971}。
-与注视持续时长相关的特征似乎都没有表现出与美感的关联性。考虑到个体的习惯不同会使得注视时长在从100ms到1000ms多的较大范围内变化\citen{Irwin1996}，这个结果不意外。
+同时，AOI中注视的平均数与美感有着很弱的正相关性，意味着对于好看的页面，用户倾向于在一个AOI上停留更多次。这也许表明对于美感评价较好的页面，观察者迅速进入了信息汲取的阶段\cite{Berlyne1971}。
+与注视持续时长相关的特征似乎都没有表现出与美感的关联性。考虑到个体的习惯不同会使得注视时长在从100ms到1000ms多的较大范围内变化\cite{Irwin1996}，这个结果不意外。
 
 \begin{table}[H]
+  \label{tab:traditional}
   \centering
-  \bicaption[tab:traditional]{传统的眼动指标与美感关联性的表现}{传统的眼动指标与美感关联性的表现。这些指标都直接提取自注视、扫视和AOI聚类这些常见的眼动度量，只有注视的总数表现出了微弱的方差检验显著性。}{Table}{The performances of some traditional statistics of fixations, saccades and AOIs. Only the number of fixations has a weak correlation with the aesthetic scores and the ANOVA is significant.}
   \begin{tabular}{lrr}
     \hline
      &相关系数 & 方差显著性 \\
@@ -114,6 +160,7 @@ websites from hell：
     AOI中注视个数的标准差 & 0.2556 & 0.0991 \\
     \hline
   \end{tabular}
+  \caption{传统的眼动指标与美感关联性的表现。这些指标都直接提取自注视、扫视和AOI聚类这些常见的眼动度量，只有注视的总数表现出了微弱的方差检验显著性。}
 \end{table}
 
 
@@ -129,22 +176,22 @@ $H(X)$越大，分布$P(x_i)$就更混乱度而不确定，反之则更有更小
 接下来我们借助信息熵来分析眼动两个维度：眼动在AOI间的跳转和注视在空间上的分布。
 
 \subsubsection{注视转移中的熵}
-最早在Tole的关于认知负担的研究中把熵的概念引入到眼动数据的分析中\citen{Tole1983}。他用熵来描述11名飞行员在执行不同任务时观察行为的变化。该模型在之后也被应用在一项关于驾车时的眼动行为的研究\citen{Gilland2008}中。
-Hooge使用一种类似的称之为“视觉路径熵”（scan path entropy）的概念来度量对一个特定视觉兴趣点的眼动一致性\citen{Hooge2013}。
+最早在Tole的关于认知负担的研究中把熵的概念引入到眼动数据的分析中\cite{Tole1983}。他用熵来描述11名飞行员在执行不同任务时观察行为的变化。该模型在之后也被应用在一项关于驾车时的眼动行为的研究\cite{Gilland2008}中。
+Hooge使用一种类似的称之为“视觉路径熵”（scan path entropy）的概念来度量对一个特定视觉兴趣点的眼动一致性\cite{Hooge2013}。
 
 下面依照Tole的基于马尔科夫链的视觉熵的定义，分析其与美感评分的关联性。
 
-Tole定义的熵描述了眼镜在注视之间转移的确定性。在实验中，注视的位置的概率空间的大小是$1280\times800$，等同于屏幕的分辨率。如此庞大的概率空间使得不同被试之间的眼动序列无法进行比较。对此，Tole的做法是把整个视觉范围人为分割为一些的区域。在本实验中，我们借助系统自动聚类生成的AOI来完成这种区块划分，并考察眼睛在这些AOI间的跳转（AOI内部的跳转被忽略）。跳转是由视觉注意机制所驱动的，在无意识的情况下从当前的目标切换到外围视觉的目标\citen{Henderson1993}，这也就是Berlyne\citen{Berlyne1971}所提出的全面视觉探索的意思。通过AOI对注视的聚类，我们可以将来自原始数据的每个被试的注视跳转转化为AOI之间的跳转（见表\ref{tab:seq}）。
+Tole定义的熵描述了眼镜在注视之间转移的确定性。在实验中，注视的位置的概率空间的大小是$1280\times800$，等同于屏幕的分辨率。如此庞大的概率空间使得不同被试之间的眼动序列无法进行比较。对此，Tole的做法是把整个视觉范围人为分割为一些的区域。在本实验中，我们借助系统自动聚类生成的AOI来完成这种区块划分，并考察眼睛在这些AOI间的跳转（AOI内部的跳转被忽略）。跳转是由视觉注意机制所驱动的，在无意识的情况下从当前的目标切换到外围视觉的目标\cite{Henderson1993}，这也就是Berlyne\cite{Berlyne1971}所提出的全面视觉探索的意思。通过AOI对注视的聚类，我们可以将来自原始数据的每个被试的注视跳转转化为AOI之间的跳转（见表\ref{tab:seq}）。
 
 \begin{figure}[H]
+  \label{fig:AOI-trans}
   \centering
   \includegraphics[width=0.75\columnwidth]{fig/fig_AOI_trans.jpg}
-  \bicaption[fig:AOI-trans]{AOI跳转示意图}{表\ref{tab:seq}中第一个被试的AOI跳转序列的示意图，它的眼动路径从标有“S”的点开始到标有“E”的点结束。}{Fig}{The sketch map of AOI transition route which starts from the point marked 'S' and ends to the point marked 'E'.}
+  \caption{表\ref{tab:seq}中第一个被试的AOI跳转序列的示意图，它的眼动路径从标有“S”的点开始到标有“E”的点结束。}
 \end{figure}
 
 \begin{table}[H]
   % \small
-  \bicaption[tab:seq]{AOI之间的眼动跳转示例}{30个被试的在图\ref{fig:aoi}中的例图的11个AOI之间的眼动跳转序列}{Table}{Gaze transitions of the 30 subjects among the 11 AOIs in the image (see Figure \ref{fig:aoi}).}
   \begin{tabular}{ll}
     1. & 6 - 7 - 11 - 3 - 11 - 10 - 9 - 2 - 3 - 4\\
     2. & 7 - 3 - 4 - 8 - 6 - 4 - 3 - 2\\
@@ -178,6 +225,8 @@ Tole定义的熵描述了眼镜在注视之间转移的确定性。在实验中�
     30.& 3 - 7 - 4\\
     \\
   \end{tabular}
+  \caption{30个被试的在图\ref{fig:aoi}中的例图的11个AOI之间的眼动跳转序列}
+  \label{tab:seq}
 \end{table}
 
 \paragraph{眼动的马尔科夫性}
@@ -189,7 +238,6 @@ Tole定义的熵描述了眼镜在注视之间转移的确定性。在实验中�
 
 \begin{table}[H]
 \centering
-  \bicaption[tab:mat]{AOI之间的一步转移概率矩阵示例}{例图的11个AOI之间的一步马尔科夫转移概率矩阵}{Table}{Markov transition probability matrix of the 11 AOIs.}
   \begin{tabular}{@{}lllllllllll@{}}
   \hline
   0    & 0    & 0.67 & 0    & 0    & 0    & 0    & 0    & 0    & 0.33 & 0    \\
@@ -205,6 +253,8 @@ Tole定义的熵描述了眼镜在注视之间转移的确定性。在实验中�
   0    & 0.1  & 0.1  & 0.17 & 0.04 & 0    & 0.21 & 0.08 & 0.04 & 0.29 & 0\\
   \hline
   \end{tabular}
+  \caption{例图的11个AOI之间的一步马尔科夫转移概率矩阵}
+  \label{tab:mat}
 \end{table}
 
 矩阵中，$p_{ij}$表示在当前注视在视觉兴趣点$i$的前提下，跳转到视觉兴趣点$j$的转移概率。
@@ -222,7 +272,6 @@ $$H_{relative}~=~\frac{H}{H_{max}}$$
 
 \begin{table}[H]
 \centering
-\bicaption[tab:ANOVA-ve]{基于AOI转移的视觉熵的方差分析}{基于AOI转移的视觉熵的方差分析}{Table}{ANOVA of visual entropy based on the gaze transitions.}
 \begin{tabular}{lrrrrr}
   \hline
   Source&SS&df&MS&F&Prob$>$F\\ \hline
@@ -231,6 +280,8 @@ $$H_{relative}~=~\frac{H}{H_{max}}$$
   Total&0.12268&39&&&\\
   \hline
 \end{tabular}
+\caption{基于AOI转移的视觉熵的方差分析}
+\label{tab:ANOVA-ve}
 \end{table}
 
 对于上述眼动熵与美感没有显著关联性的可能是如下两个原因导致的如下：
@@ -243,12 +294,13 @@ $$H_{relative}~=~\frac{H}{H_{max}}$$
 \subsubsection{基于热图的熵}
 上述的基于马尔科夫链的熵把眼动行为理解成由注视和扫视（转移）构成的一系列相关事件。
 
-这里我们引入一种新的基于最广泛应用在眼动数据中的可视化手段——热图\citen{Nielsen2010}的熵的概念来度量视觉注意的确定性。与之前用来计算熵的眼动转移序列不同，热图没有包含任何有关注视顺序的信息，这意味着新的熵度量是独立看待所有的眼动注视，而不在时间顺序上考量他们的关联性的。
+这里我们引入一种新的基于最广泛应用在眼动数据中的可视化手段——热图\cite{Nielsen2010}的熵的概念来度量视觉注意的确定性。与之前用来计算熵的眼动转移序列不同，热图没有包含任何有关注视顺序的信息，这意味着新的熵度量是独立看待所有的眼动注视，而不在时间顺序上考量他们的关联性的。
 
 \begin{figure}[H]
+  \label{fig:hm}
   \centering
   \includegraphics [width=\columnwidth]{fig/fig_eg_hm.jpg}
-  \bicaption[fig:hm]{眼动热图示例}{图\ref{fig:aoi}中的例图的眼动热图。它是对眼睛在画面上的注视位置的概率分布的一种逼近或估计。}{Fig}{The heatmap of the example pages in figure \ref{fig:aoi}. It visualizes the spatial probability distribution of fixations on the page.}
+  \caption{图\ref{fig:aoi}中的例图的眼动热图。它是对眼睛在画面上的注视位置的概率分布的一种逼近或估计。}
 \end{figure}
 
 考察代表眼动注视的位置的二维随机变量$(X, Y)$，则它的概率空间就是屏幕的分辨率空间（即把屏幕上的每一个像素认为是注视的一种可能的位置选择）。基于作用在该随机变量上的概率分布$P(X, Y)$，可以如下定义熵：
@@ -261,27 +313,29 @@ $$H(P)~=-\sum_{x=1}^{1280} \sum_{y=1}^{800} P(x, y)log_2 P(x, y)$$
 对热图计算的信息熵可以反映被试的眼动在空间上的分布的一致性或者凝聚度：当所有的注视都聚焦在同一个像素上时，将产生最小的熵值；而当所有的注视平均地分散在屏幕上时，将产生最大的熵值。
 通过在每个眼动注视点上，叠加一个与注视的时长成正比的具有固定标准差的高斯核，可以实现用少量的眼动采样据来逼近估计注视在屏幕上的空间分布。
 
-对一个在屏幕上横坐标位置为$x_0$，纵坐标位置为$y_0$，持续时长为$d$的单个眼动注视所产生的高斯核可以表达为：
+对一个在屏幕上横坐标位置为$x_0$，纵坐标位置为$y_0$，持续时长为$d$的单个眼动注视，它产生的高斯核可以表达为：
 
 $$d\cdot e^{-\frac{(x-x_0)^2 + (y-y_0)^2}{2\sigma^2}}$$
 
-其中$\sigma$是高斯核的标准差。最终通过这些高斯核叠加得到的分布$P(X, Y)$还要进行归一化处理，以满足$\sum\sum P(X, Y) = 1$的概率分布的条件。
+其中$\sigma$是高斯核的标准差。注意到上述的表达式并非标准的归一化的正态分布表达式，因为最终通过这些高斯核叠加得到的分布$P(X, Y)$还要进行归一化处理，以满足$\sum\sum P(X, Y) = 1$的概率分布的条件。
 
-除了用有限数据估计概率分布的需要之外，引入高斯核叠加的合理性还体现在人眼的注视事实上是与人眼的黄斑对应的具有一定半径的圆形范围，而实际的眼动注视也并非绝对固定不动而是包含一些微动行为的\citen{Martinez2004}。另外考虑到眼动仪的检测本身具有一定的误差范围，高斯叠加的做法也令指标对误差具有一定的容忍度。图\ref{fig:hm}展示了$\sigma=30px$时的热图的形态。
+除了用有限数据估计概率分布的需要之外，引入高斯核叠加的合理性还体现在人眼的注视事实上是与人眼的黄斑对应的具有一定半径的圆形范围，而实际的眼动注视也并非绝对固定不动而是包含一些微动行为的\cite{Martinez2004}。另外考虑到眼动仪的检测本身具有一定的误差范围，高斯叠加的做法也令指标对误差具有一定的容忍度。图\ref{fig:hm}展示了$\sigma=30px$时的热图的形态。
 
 通过对40张实验页面的热图的熵的计算，发现其与美感评分表现出显著的负相关性（$r = -0.5412, F = 15.79, P = 0.0003$)。
 
 \begin{table}[H]
+
 \centering
-\bicaption[tab:ANOVA-vae-dw]{VAE的方差分析}{热图熵（视觉注意熵）的方差分析。}{Table}{ANOVA analysis of the entropy of heatmap.}
-\begin{tabular}{lrrrrr}
-  \hline
-  Source&SS&df&MS&F&Prob$>$F\\ \hline
-  Groups&1.15861&1&1.15861&15.79&0.0003\\
-  Error&2.78901&38&0.07339&&\\
-  Total&3.94762&39&&&\\
-  \hline
-\end{tabular}
+  \label{tab:ANOVA-vae-dw}
+  \begin{tabular}{lrrrrr}
+    \hline
+    Source&SS&df&MS&F&Prob$>$F\\ \hline
+    Groups&1.15861&1&1.15861&15.79&0.0003\\
+    Error&2.78901&38&0.07339&&\\
+    Total&3.94762&39&&&\\
+    \hline
+  \end{tabular}
+  \caption{热图熵（视觉注意熵）的方差分析。}
 \end{table}
 
 到目前为止的结果显示，基于热图的熵是与美感表现出最强相关性的指标。鉴于热图有时会被认为是视觉注意的分布图，我们把上述定义的基于热图的熵称作视觉注意熵（Visual Attention Entropy），简称做VAE。
@@ -303,56 +357,61 @@ rVAE = \frac{VAE}{bVAE}
 与VAE相比，rVAE与美感评分的关联性有了显著提高，线性相关系数从-0.54提高到了-0.66。$F = 26.84, P = 0.000008$。
 
 \begin{table}[H]
-\centering
-\bicaption[tab:ANOVA-rvae-dw]{rVAE的方差分析}{相对视觉注意熵（rVAE）的方差分析}{Table}{ANOVA of rVAE.}
-\begin{tabular}{lrrrrr}
-  \hline
-  Source&SS&df&MS&F&Prob$>$F\\ \hline
-  Groups&0.00336&1&0.00336&26.84&7.53E-06\\
-  Error&0.00475&38&0.00013&&\\
-  Total&0.00811&39&&&\\
-  \hline
-\end{tabular}
+  \label{tab:ANOVA-rvae-dw}
+  \centering
+  \begin{tabular}{lrrrrr}
+    \hline
+    Source&SS&df&MS&F&Prob$>$F\\ \hline
+    Groups&0.00336&1&0.00336&26.84&7.53E-06\\
+    Error&0.00475&38&0.00013&&\\
+    Total&0.00811&39&&&\\
+    \hline
+  \end{tabular}
+  \caption{相对视觉注意熵（rVAE）的方差分析}
 \end{table}
 
 算式\ref{formula:rvae}似乎表明，基础视觉注意熵（bVAE）越大则相对视觉注意熵（rVAE）越小，则对应的美感有越大可能更好。但事实上，这不完全正确，由于之间的显著的相关性（$r = 0.77$）表\ref{tab:corr}，拥有较高的bVAE的页面很可能也会有较高的VAE。如果把bVAE当做是通讯信道的带宽，那么$1/(rVAE - 1)$便是通讯的信噪比（SNR）。
 
 \begin{table}[H]
-\centering
-\bicaption[tab:corr]{重要眼动指标的相关系数}{主要的眼动指标和美感得分两两之间的相关系数。}{Table}{The pearson correlations in-between the aesthetic scores and the main indices.}
-\begin{tabular}{l|rrrrrr}
-  \hline
-        &美感评分&注视总数&VAE&bVAE&rVAE\\ \hline
-  美感评分 &1&0.33&\bfseries{-0.54}&-0.13&\bfseries{-0.66}\\
-  注视总数&-&1&0.14&\bfseries{0.61}&-0.14\\
-  VAE&-&-&1&\bfseries{0.77}&\bfseries{0.94}\\
-  bVAE&-&-&-&1&0.52\\
-  rVAE&-&-&-&-&1\\
-  \hline
-\end{tabular}
+  \label{tab:corr}
+  \centering
+  \begin{tabular}{l|rrrrrr}
+    \hline
+          &美感评分&注视总数&VAE&bVAE&rVAE\\ \hline
+    美感评分 &1&0.33&\bfseries{-0.54}&-0.13&\bfseries{-0.66}\\
+    注视总数&-&1&0.14&\bfseries{0.61}&-0.14\\
+    VAE&-&-&1&\bfseries{0.77}&\bfseries{0.94}\\
+    bVAE&-&-&-&1&0.52\\
+    rVAE&-&-&-&-&1\\
+    \hline
+  \end{tabular}
+  \caption{主要的眼动指标和美感得分两两之间的相关系数。}
 \end{table}
 
 上述关键指标间的相关性分析表明，bVAE与美感评分几乎没有相关性（$r=-0.13$），但与注视总数有较为显著的相关性（$r=0.61$），而注视总数与美感评分又有弱相关性（$r=0.33$）。图\ref{fig:bvae}列出了所有的页面的个体VAE的盒图。
 
 \begin{figure}[H]
+  \label{fig:bvae}
   \centering
   \includegraphics [width=1\columnwidth]{fig/fig_bvae.pdf}
-  \bicaption[fig:bvae]{bVAE的盒图}{40张页面上30个被试的视觉重点熵（VAE）的盒图。页面从做到右按照美感评分排序。红色短横线代表均值，及该页面的基础视觉注意熵（bVAE）。在好坏页面见没有表现出显著差异。}{Fig}{Boxplots of the 30 individual VAEs on each of the 40 webpages. The 40 pages are sorted by their scores, from low to high. The red lines in the boxes represent the bVAEs (means).  There is no apparent difference between the good and the bad pages}
+  \caption{40张页面上30个被试的视觉重点熵（VAE）的盒图。页面从做到右按照美感评分排序。红色短横线代表均值，及该页面的基础视觉注意熵（bVAE）。在好坏页面见没有表现出显著差异。}
 \end{figure}
 
 bVAE的引入使得具有不同内容复杂度的页面的VAE变得可比较，并提供了对他们的美感评分的更为精确的预测。
 图\ref{fig:box}展示了VAE和rVAE的方差分析盒图。图\ref{fig:with-score}展示了所有40张实验页面的美感评分分别关于VAE和rVAE的散点图。相比VAE，rVAE在区分好坏页面上具有更好的表现。
 
 \begin{figure}[H]
+  \label{fig:box}
   \centering
   \includegraphics [width=1\columnwidth]{fig/fig_box.pdf}
-  \bicaption[fig:box]{VAE和rVAE的盒图}{VAE和rVAE的盒图。左为VAE右为rVAE。显然，rVAE更显著地区分了好坏两个页面组别。}{Fig}{Boxplot of VAE (left) and rVAE (right). Apparently, the rVAEs more significantly separate the two classes.}
+  \caption{VAE和rVAE的盒图。左为VAE右为rVAE。显然，rVAE更显著地区分了好坏两个页面组别。}
 \end{figure}
 
 \begin{figure}[H]
+  \label{fig:with-score}
   \centering
   \includegraphics [width=1\columnwidth]{fig/fig_with-score.pdf}
-  \bicaption[fig:with-score]{VAE和rVAE关于得分的的散点图}{40张页面的VAE-得分散点图（左）和rVAE-得分散点图（右）。右图的点云更强的方向性。}{Fig}{The scatter plots of 40 pages over VAE (left) and rVAE (right). The point cloud in the right plot appears more significantly skewed.}
+  \caption{40张页面的VAE-得分散点图（左）和rVAE-得分散点图（右）。右图的点云更强的方向性。}
 \end{figure}
 
 \clearpage
@@ -364,6 +423,7 @@ bVAE的引入使得具有不同内容复杂度的页面的VAE变得可比较，�
 图\ref{fig:out}上给出了这张页面的原始样本，不得不承认这张页面看起来还是不错的，包含了很多富有吸引力的因素如：漂亮的图片、色彩、对称的布局等等。然而从一个设计师的角度，它还有不小的提升空间。全屏来浏览这张页面时，眼睛会感到一定的选择压力。这可能是因为视觉外围的一些密集的高对比造成的。图\ref{fig:out}下给出了这张页面经过细微版式调整后的版本。它阐明了细微的细节改动是如何改变给人的第一印象的。VAE本质上是受画面的边缘对比、复杂度等底层低级特征影响的，例外中的高VAE和rVAE洽洽反映了这张页面对观察者视觉的压力。因而我们相信我们相信一个网页的VAE和rVAE是对网页美感的一个普遍的影响因素。不过可以肯定的是它并不能解释全部的美感，诸如画面图片质量、局部元素的设计等因素也会对美感判断造成不可忽视的影响。
 
 \begin{figure}[H]
+  \label{fig:out}
   \centering
   \setlength{\fboxrule}{0pt}
   \setlength{\fboxsep}{0.5cm}
@@ -373,7 +433,7 @@ bVAE的引入使得具有不同内容复杂度的页面的VAE变得可比较，�
   \fbox{
     \includegraphics [width=0.8\columnwidth]{fig/fig_out_alt.jpg}
   }
-  \bicaption[fig:out]{眼动实验中例外的页面}{例外页面图（上）和改进的例外页面（下）。该页面在图\ref{fig:with-score}中标号24。如果全屏显示，你会觉得视觉上有一些决策压力。 右侧是略微改进后的版本，一些局部的视觉重点被调整了，从而视觉压力略微降低。}{Fig}{The top is one of the outlier pages (point 24 in Fig \ref{fig:with-score}). If you display it on full screen, you may feel your eyes a little strained with selection pressure. As a comparison, the bottom is a revised version, in which some local saliencies have been adjusted. You may feel your eyes slightly relaxed.}
+  \caption{例外页面图（上）和改进的例外页面（下）。该页面在图\ref{fig:with-score}中标号24。如果全屏显示，你会觉得视觉上有一些决策压力。 右侧是略微改进后的版本，一些局部的视觉重点被调整了，从而视觉压力略微降低。}
 \end{figure}
 
 \section{VAE的稳定性}
@@ -384,29 +444,31 @@ bVAE的引入使得具有不同内容复杂度的页面的VAE变得可比较，�
 
 \vspace{1cm}
 \begin{figure}[H]
+  \label{fig:with-t}
   \includegraphics [width=0.5\columnwidth]{fig/fig_vae-t.pdf}
   \includegraphics [width=0.5\columnwidth]{fig/fig_rvae-t.pdf}
-  \bicaption[fig:with-t]{VAE和rVAE的值随时间的变化}{40张页面的VAE(上)和rVAE（下）随时间的变化图。蓝色曲线代表美感评分较好的网页组别，红色代表坏的。这些曲线随时间逐步趋于稳定，好的页面普遍给出了更小的VAE和rVAE值。两个组别随时间愈发分离。}{Fig}{The VAEs (top) and the rVAEs (bottom) of the 40 pages gradually stabilize over time. The blue curves represent the "good" pages. The red curves represent the "bad" pages. The good pages generally yield lower VAE and rVAE values. The two groups  become more separated towards the end.
-}
+  \caption{40张页面的VAE(上)和rVAE（下）随时间的变化图。蓝色曲线代表美感评分较好的网页组别，红色代表坏的。这些曲线随时间逐步趋于稳定，好的页面普遍给出了更小的VAE和rVAE值。两个组别随时间愈发分离。}
 \end{figure}
 \clearpage
 
 图\ref{fig:corr-t}展现了熵和美感评分的相关系数随时间变化的曲线，在三秒的时刻相关系数取得了极值。由于我们没有记录3秒后的眼动数据，故没有办法看到后续的发展趋势。以曲线的增长趋势，我们猜测相关系数在3000ms或更长的实验时间上可能变得更显著。
 
 \begin{figure}[H]
+  \label{fig:corr-t}
   \centering
   \includegraphics [width=0.95\columnwidth]{fig/fig_corr_t.pdf}
-  \bicaption[fig:corr-t]{rVAE和VAE与美感的相关系数随时间的变化}{两种视觉注意熵和美感评分的相关系数随时间的变化曲线。熵的显著性随时间愈发加强。1000ms开始rVAE的曲线稳定保持在VAE曲线的下方。依照发展的趋势，如果继续延长实验时间至超过3000ms，熵的表现可能更佳。}{Fig}{ The correlations between the entropies and the aesthetic scores become more and more significant over time. It is clear that rVAEs consistently sit below the VAEs after 1000 ms. The tendencies show that both curves, especially the rVAEs, could perform better, if the duration were longer than 3000 ms.}
+  \caption{两种视觉注意熵和美感评分的相关系数随时间的变化曲线。熵的显著性随时间愈发加强。1000ms开始rVAE的曲线稳定保持在VAE曲线的下方。依照发展的趋势，如果继续延长实验时间至超过3000ms，熵的表现可能更佳。}
 \end{figure}
 \clearpage
 
 图\ref{fig:with-user}展现了熵与美感评分的相关性随着被纳入计算的被试人数的增长而逐渐趋于稳定的趋势。图中的曲线结果是通过每次纳入一名随机选择的被试的眼动数据获得的。似乎更多的被试人数会获得更好的与美感评分的关联性，但同时这也意味着更高的时间成本和实验开销。
 
 \begin{figure}[H]
+  \label{fig:with-user}
   \centering
   \includegraphics [width=0.95\columnwidth]{fig/fig_user.pdf}
   %\includegraphics [width=80mm]{fig_vae_user.jpg}
-  \bicaption[fig:with-user]{VAE和rVAE关于参与计算的用户人的变化}{VAE和rVAE随参与计算的用户人数的增多逐渐趋于稳定和显著。更多的实验人数（超过30人）可能表现出更好的结果}{Fig}{the correlations between the entropies and the aesthetic scores become more significant with the increasing numbers of subjects. The performance could be better if the number of subjects were larger than 30.}
+  \caption{VAE和rVAE随参与计算的用户人数的增多逐渐趋于稳定和显著。更多的实验人数（超过30人）可能表现出更好的结果}
 \end{figure}
 \clearpage
 
@@ -414,9 +476,10 @@ bVAE的引入使得具有不同内容复杂度的页面的VAE变得可比较，�
 图\ref{fig:with-sigma}展现了相关系数随高斯核的平滑变化。在相当大的一个$\sigma$取值区间内，VAE和rVAE的表现都很稳定。VAE在$13px-60px$的区间内都有低于-0.5的与美感评分的相关系数；rVAE在$10px-120px$的区间内都有低于-0.6的与美感的相关系数。故熵的表现对于$\sigma$的取值是不敏感的。
 
 \begin{figure}[H]
+  \label{fig:with-sigma}
   \centering
   \includegraphics [width=0.95\columnwidth]{fig/fig_sigma.pdf}
-  \bicaption[fig:with-sigma]{VAE和rVAE关于高斯核的标准差$\sigma$的变化}{两种视觉注意熵与美感的相关性随热图高斯核标准差的变化的曲线图。曲线较为平滑，在很长一段区间内都保持在各自的极值附近：对VAE，从$20px$到$60px$都保持在-0.5以下，对rVAE，从$10px$到$120px$都保持在-0.6以下并在$40px$左右取得其极值。}{Fig}{The correlations smoothly change with the value of $\sigma$. The performances of both VAE and rVAE are stably approaching their maxima in a rather wide range of the $\sigma$. For VAE, from $20px$ to $60px$, the correlation coefficient stays below -0.5. For rVAE, from 10px to 120px, the correlation coefficient stays below -0.6 and the curve reaches its extremum at about $40px$.}
+  \caption{两种视觉注意熵与美感的相关性随热图高斯核标准差的变化的曲线图。曲线较为平滑，在很长一段区间内都保持在各自的极值附近：对VAE，从$20px$到$60px$都保持在-0.5以下，对rVAE，从$10px$到$120px$都保持在-0.6以下并在$40px$左右取得其极值。}
 \end{figure}
 
 上述的分析证实了VAE和rVAE在对美感的推测力方面的稳定性。并且看来，通过加长实验时间、扩大被试的规模和选择合适的$\sigma$取值，它们的表现还可以更好。
@@ -427,10 +490,14 @@ bVAE的引入使得具有不同内容复杂度的页面的VAE变得可比较，�
 
 VAE的成功的一部分因素归功于通过高斯核进行的类似于插值的概率分布模拟，使眼动注视的呈连续分布。同时把3秒内的所有注视信息都投影在单个平面上的做法，令数据密度更高，更接近真实的眼动注视的分布概率。注视转移序列熵的失败的也许可以归咎于其基于时间的统计方式导致的数据量的稀疏。此刻仍很难说它与人的美感判断是无关的。也许未来可以找到更适用的模型来找出其余美感之间的内在联系。
 
-一个较低的VAE可以解释人们在眼睛动向和视觉搜索上更少的代价付出，或者说一个较小的视觉注意负担。实验中好的网页拥有更小的VAE的趋势支持了流畅理论\citen{Reber2004}的说法，并一定程度上解释了为什么“好看的就是好用的”\citen{Tractinsky2000}，或者“糟糕的可用性会对感受到的美感产生负面影响”\citen{Tuch2012Is}。
+一个较低的VAE可以解释人们在眼睛动向和视觉搜索上更少的代价付出，或者说一个较小的视觉注意负担。实验中好的网页拥有更小的VAE的趋势支持了流畅理论\cite{Reber2004}的说法，并一定程度上解释了为什么“好看的就是好用的”\cite{Tractinsky2000}，或者“糟糕的可用性会对感受到的美感产生负面影响”\cite{Tuch2012Is}。
 
-VAE是基于眼动注视中的特定信息的。作为一个新的客观的眼动数据量化指标，它显然不是对美感评价的仅有的一种度量。视觉注视在功能性上与鼠标指向很相似，这在一定程度上解释了为什么一些视觉引导相关的设计原则与MacKenzie 1992提出的Fitts规则（选择层级代价经验公式）\citen{MacKenzie1992}很相似。
+VAE是基于眼动注视中的特定信息的。作为一个新的客观的眼动数据量化指标，它显然不是对美感评价的仅有的一种度量。视觉注视在功能性上与鼠标指向很相似，这在一定程度上解释了为什么一些视觉引导相关的设计原则与MacKenzie 1992提出的Fitts规则（选择层级代价经验公式）\cite{MacKenzie1992}很相似。
 
-rVAE可以被理解成在屏幕范围的限制（带宽）下用尽可能小的视觉注意代价（即VAE）去获取尽可能多的有用信息量（无噪声的信号）。这与基于进化论美学\citen{Shimamura2012}的“最大效益最小手段”\citen{Hekkert2006}的美学原则是一致的。进化论美学认为人类是为了提高生存和繁衍的成功率而进化出基础审美能力的。
+rVAE可以被理解成在屏幕范围的限制（带宽）下用尽可能小的视觉注意代价（即VAE）去获取尽可能多的有用信息量（无噪声的信号）。这与基于进化论美学\cite{Shimamura2012}的“最大效益最小手段”\cite{Hekkert2006}的美学原则是一致的。进化论美学认为人类是为了提高生存和繁衍的成功率而进化出基础审美能力的。
 
-眼动代表了显性和隐形注意\citen{Goodale1992}的一种合作。虽然我们发现通过眼动行为来预测一个页面的美感至少需要约1000ms的眼动数据，我们对页面的第一印象的产生却只需要50 - 500ms\citen{Lindgaard2006}。事实上我们认为，50ms仅仅足够完成一个对页面的快速“截屏”，仅仅表明大脑可以通过50ms曝光的残留印象形成的隐形注意热图就作出美感的评价。而在50ms左右，我们的眼睛仍然停留在原地不动，完成汲取信息或是决策下一个注视点的任务。
+眼动代表了显性和隐形注意\cite{Goodale1992}的一种合作。虽然我们发现通过眼动行为来预测一个页面的美感至少需要约1000ms的眼动数据，我们对页面的第一印象的产生却只需要50 - 500ms\cite{Lindgaard2006}。事实上我们认为，50ms仅仅足够完成一个对页面的快速“截屏”，仅仅表明大脑可以通过50ms曝光的残留印象形成的隐形注意热图就作出美感的评价。而在50ms左右，我们的眼睛仍然停留在原地不动，完成汲取信息或是决策下一个注视点的任务。
+
+\printbibliography[heading=bibintoc]
+\makeatother
+\end{document}
